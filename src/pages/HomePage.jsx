@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import homeBg from "../assets/images/home-bg.png";
 import CustomButton from "../ui/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -9,7 +10,10 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-[url('./src/assets/images/home-bg.png')] h-screen bg-cover bg-center relative">
+    <div
+      className="h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${homeBg})` }}
+    >
       <div className="pt-[540px] pb-[60px] flex flex-col items-center">
         <h1 className="font-manrope font-bold text-[60px] leading-[1.2] text-center text-white mb-5">
           Find your perfect rental car
